@@ -3,15 +3,19 @@ package com.example.sqlite
 class Notas{
 
     var notasID: Int? = null
-    var titulo: String? = null
-    var descripcion: String? = null
+    var nombre: String? = null
+    var cargo: String? = null
+    var correo: String? = null
+    var telefono: Int? = null
 
-    constructor(notasID: Int,titulo: String,descripcion: String){
+    constructor(notasID: Int,nombre: String,cargo: String,correo: String,telefono: Int){
 
 
         this.notasID = notasID
-        this.titulo = titulo
-        this.descripcion = descripcion
+        this.nombre = nombre
+        this.cargo = cargo
+        this.correo = correo
+        this.telefono = telefono
     }
 
 
