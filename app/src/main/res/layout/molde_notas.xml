@@ -45,11 +45,19 @@
             android:orientation="horizontal">
 
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+            <ImageView
+                android:id="@+id/imageViewEnviarCorreo"
+                android:layout_width="40pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_email" />
 
+            <ImageView
+                android:id="@+id/imageViewRealizarLlamada"
+                android:layout_width="40pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_call" />
 
             <ImageView
                 android:id="@+id/imageViewEdicion"
