@@ -45,7 +45,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
                 val ID = cursor.getInt(cursor.getColumnIndex("ID"))
                 val nombre = cursor.getString(cursor.getColumnIndex("Nombre"))
                 val cargo = cursor.getString(cursor.getColumnIndex("Cargo"))
-                val correo = cursor.getString(cursor.getColumnIndex("Corre"))
+                val correo = cursor.getString(cursor.getColumnIndex("Correo"))
                 val telefono = cursor.getInt(cursor.getColumnIndex("Telefono"))
 
                 listaDeNotas.add(Notas(ID,nombre,cargo,correo,telefono))
