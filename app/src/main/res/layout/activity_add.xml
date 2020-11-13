@@ -11,61 +11,82 @@
         android:id="@+id/editTextTextNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="50dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         android:textColorHint="@color/Blanco"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="48dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextCargo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextCargo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
         android:ems="10"
         android:hint="Corgo"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         android:textColorHint="@color/Blanco"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="143dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextNumTelefono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextNombre" />
 
     <EditText
         android:id="@+id/editTextTextNumTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
         android:ems="10"
         android:hint="Telefono"
+        android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         android:textColorHint="@color/Blanco"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="251dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextDescricpion3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextCargo" />
 
     <EditText
         android:id="@+id/editTextTextDescricpion3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="252dp"
         android:ems="10"
         android:hint="Contenido"
+        android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         android:textColorHint="@color/Blanco"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="343dp" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonAgregar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextNumTelefono" />
 
     <Button
         android:id="@+id/buttonAgregar"
-        android:layout_width="152dp"
-        android:layout_height="59dp"
+        android:layout_width="135dp"
+        android:layout_height="52dp"
         android:background="@drawable/btn_aregar"
         android:drawableRight="@mipmap/ic_add"
-        android:textColor="@color/Blanco"
         android:onClick="btnAdd"
         android:paddingEnd="5pt"
         android:paddingRight="10pt"
         android:text="AGREGAR"
-        tools:layout_editor_absoluteX="229dp"
-        tools:layout_editor_absoluteY="640dp" />
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
 </androidx.constraintlayout.widget.ConstraintLayout>
