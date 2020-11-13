@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="ColorAmarillo">#edbb26</color>
-    <color name="ColorAmarilloClaro">#ebddb5</color>
+    <color name="Blanco">#FFFF</color>
+    <color name="verde">#1b5e20</color>
+    <color name="negro">#000000</color>
+
 </resources>

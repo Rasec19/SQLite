@@ -4,50 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddActivity"
-    android:background="@color/ColorAmarillo">
+    android:background="@color/verde"
+    tools:context=".AddActivity">
 
     <EditText
-        android:id="@+id/editTextTextTitulo"
+        android:id="@+id/editTextTextNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:ems="10"
-        android:hint="Titulo"
+        android:hint="Nombre"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/Blanco"
+        android:textColorHint="@color/Blanco"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="48dp" />
 
     <EditText
-        android:id="@+id/editTextTextDescricpion"
+        android:id="@+id/editTextTextCargo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Corgo"
+        android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
+        android:textColorHint="@color/Blanco"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <EditText
+        android:id="@+id/editTextTextNumTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Telefono"
+        android:textColor="@color/Blanco"
+        android:textColorHint="@color/Blanco"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="251dp" />
+
+    <EditText
+        android:id="@+id/editTextTextDescricpion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Contenido"
+        android:textColor="@color/Blanco"
+        android:textColorHint="@color/Blanco"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAgregar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextTitulo"
-        app:layout_constraintVertical_bias="0.04" />
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="343dp" />
 
     <Button
         android:id="@+id/buttonAgregar"
         android:layout_width="152dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="144dp"
         android:background="@drawable/btn_aregar"
         android:drawableRight="@mipmap/ic_add"
+        android:textColor="@color/Blanco"
         android:onClick="btnAdd"
         android:paddingEnd="5pt"
         android:paddingRight="10pt"
         android:text="AGREGAR"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.779"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="640dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
