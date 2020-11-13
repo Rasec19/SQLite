@@ -14,12 +14,15 @@ class DBManager{
     val dbNombre = "MisNotas"
     val dbTabla = "Notas"
     val ColumnaID = "ID"
-    val ColumnaTitulo = "Titulo"
-    val ColumnaDescripcion = "Descripcion"
+    val ColumnaTitulo = "Nombre"
+    val ColumnaDescripcion = "Cargo"
+    val columnaCorreo = "Correo"
+    val ColumnaTelefono = "Telefono"
     val dbVersion = 1
 
     val sqlCrearTabla = "CREATE TABLE IF NOT EXISTS " + dbTabla + " (" + ColumnaID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
-            ColumnaTitulo + " TEXT NOT NULL," + ColumnaDescripcion + " TEXT NOT NULL)"
+            ColumnaTitulo + " TEXT NOT NULL," + ColumnaDescripcion + " TEXT NOT NULL,"+ columnaCorreo + " TEXT NOT NULL,"+
+            ColumnaTelefono + " INT NOT NULL)"
 
 
     var sqlDB: SQLiteDatabase?=null
