@@ -23,8 +23,10 @@ class AddActivity : AppCompatActivity() {
             id = bundle!!.getInt("ID",0)
 
             if(id!=0){
-                editTextTextTitulo.setText(bundle.getString("Titulo"))
-                editTextTextDescricpion.setText(bundle.getString("Descripcion"))
+                editTextNombreEmpleado.setText(bundle.getString("Nombre"))
+                editTextCargo.setText(bundle.getString("Cargo"))
+                editTextCorreo.setText(bundle.getString("Correo"))
+                editTextNumeroTelefono.setText(bundle.getString("Telefono"))
             }
         }catch(e:Exception){}
 
@@ -36,8 +38,10 @@ class AddActivity : AppCompatActivity() {
         val baseDatos = DBManager(this)
 
         val values = ContentValues()
-            values.put("Titulo",editTextTextTitulo.text.toString())
-            values.put("Descripcion",editTextTextDescricpion.text.toString())
+            values.put("Nombre",editTextNombreEmpleado.text.toString())
+            values.put("Cargo",editTextCargo.text.toString())
+            values.put("Correo",editTextCorreo.text.toString())
+            values.put("Telefono",editTextNumeroTelefono.text.toString())
 
 
         if(id == 0){

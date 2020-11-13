@@ -32,10 +32,10 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
     fun cargarQuery(titulo: String){
         var baseDatos = DBManager(this)
-        val columnas = arrayOf("ID", "Titulo", "Descripcion")
+        val columnas = arrayOf("ID", "Nombre", "Cargo", "Correo", "Telefono")
         val selectionArgs = arrayOf(titulo)
 
-        var cursor = baseDatos.query(columnas,"Titulo like ?",selectionArgs,"Titulo")
+        var cursor = baseDatos.query(columnas,"Nombre like ?",selectionArgs,"Nombre")
 
         listaDeNotas.clear()
 
@@ -43,10 +43,12 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
         if (cursor.moveToFirst()){
             do{
                 val ID = cursor.getInt(cursor.getColumnIndex("ID"))
-                val titulo = cursor.getString(cursor.getColumnIndex("Titulo"))
-                val descripcion = cursor.getString(cursor.getColumnIndex("Descripcion"))
+                val nombre = cursor.getString(cursor.getColumnIndex("Nombre"))
+                val cargo = cursor.getString(cursor.getColumnIndex("Cargo"))
+                val correo = cursor.getString(cursor.getColumnIndex("Corre"))
+                val telefono = cursor.getInt(cursor.getColumnIndex("Telefono"))
 
-                listaDeNotas.add(Notas(ID,titulo,descripcion))
+                listaDeNotas.add(Notas(ID,nombre,cargo,correo,telefono))
             }while (cursor.moveToNext())
         }
 
@@ -98,8 +100,10 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             val inflater = contexto!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val miVista = inflater.inflate(R.layout.molde_notas, null)
 
-            miVista.textViewTitulo.text = nota.titulo
-            miVista.textViewContenido.text = nota.descripcion
+            miVista.textViewNombreEmpleado.text = nota.nombre
+            miVista.textViewCargoEmpleado.text = nota.cargo
+            miVista.textViewCorreo.text = nota.correo
+            miVista.textViewNumeroTelefono.text = nota.telefono.toString()
 
             miVista.imageViewBorrar.setOnClickListener{
                 val dbManager = DBManager(this.contexto!!)
@@ -112,9 +116,19 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             miVista.imageViewEdicion.setOnClickListener{
                 val intent = Intent(this@MainActivity,AddActivity::class.java)
                 intent.putExtra("ID",nota.notasID)
-                intent.putExtra("Titulo",nota.titulo)
-                intent.putExtra("Descripcion",nota.descripcion)
+                intent.putExtra("Nombre",nota.nombre)
+                intent.putExtra("Cargo",nota.cargo)
+                intent.putExtra("Correo",nota.correo)
+                intent.putExtra("Telefono",nota.telefono)
                 startActivity(intent)
+
+            }
+
+            miVista.imageViewRealizarLlamada.setOnClickListener{
+
+            }
+
+            miVista.imageViewEnviarCorreo.setOnClickListener{
 
             }
 
