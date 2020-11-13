@@ -4,16 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ColorAmarillo"
-    tools:context=".AddActivity">
 
-    <EditText
-        android:id="@+id/editTextTextNombreEmpleado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nombre empleado"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextCargo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.308"
@@ -25,7 +16,7 @@
         android:id="@+id/editTextTextCargo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+
         android:ems="10"
         android:hint="Cargo del empleado"
         android:inputType="textPersonName"
@@ -55,24 +46,19 @@
         android:ems="10"
         android:hint="Numero de telefono"
         android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
+        android:textColorHint="@color/Blanco"
         app:layout_constraintBottom_toTopOf="@+id/buttonAgregar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/buttonAgregar"
-        android:layout_width="152dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="128dp"
         android:background="@drawable/btn_aregar"
         android:drawableRight="@mipmap/ic_add"
         android:onClick="btnAdd"
         android:paddingEnd="5pt"
         android:paddingRight="10pt"
         android:text="AGREGAR"
+        android:textColor="@color/Blanco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.729"
-        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
