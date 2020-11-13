@@ -16,16 +16,28 @@
         android:background="@drawable/background_notas">
 
         <TextView
-            android:id="@+id/textViewTitulo"
+            android:id="@+id/textViewNombreEmpleado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Titulo" />
+            android:text="Nombre" />
 
         <TextView
-            android:id="@+id/textViewContenido"
+            android:id="@+id/textViewCargoEmpleado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contenido" />
+            android:text="Cargo" />
+
+        <TextView
+            android:id="@+id/textViewCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo" />
+
+        <TextView
+            android:id="@+id/textViewNumeroTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefono" />
 
         <LinearLayout
             android:layout_width="match_parent"
