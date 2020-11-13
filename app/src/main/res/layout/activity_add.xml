@@ -79,7 +79,7 @@
         android:paddingEnd="5pt"
         android:paddingRight="10pt"
         android:text="AGREGAR"
-        android:textColor="@color/Blanco"
+        android:textColor="@color/negro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
