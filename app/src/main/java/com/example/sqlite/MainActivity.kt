@@ -3,12 +3,14 @@ package com.example.sqlite
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
 import android.widget.BaseAdapter
 import android.widget.SearchView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_add.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.molde_notas.*
 import kotlinx.android.synthetic.main.molde_notas.view.*
@@ -50,7 +52,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
                 val nombre = cursor.getString(cursor.getColumnIndex("Nombre"))
                 val cargo = cursor.getString(cursor.getColumnIndex("Cargo"))
                 val correo = cursor.getString(cursor.getColumnIndex("Correo"))
-                val telefono = cursor.getInt(cursor.getColumnIndex("Telefono"))
+                val telefono = cursor.getString(cursor.getColumnIndex("Telefono"))
 
                 listaDeNotas.add(Notas(ID,nombre,cargo,correo,telefono))
             }while (cursor.moveToNext())
@@ -107,7 +109,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             miVista.textViewNombreEmpleado.text = nota.nombre
             miVista.textViewCargoEmpleado.text = nota.cargo
             miVista.textViewCorreo.text = nota.correo
-            miVista.textViewNumeroTelefono.text = nota.telefono.toString()
+            miVista.textViewNumeroTelefono.text = nota.telefono
 
             miVista.imageViewBorrar.setOnClickListener{
                 val dbManager = DBManager(this.contexto!!)
@@ -134,6 +136,9 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             }
 
             miVista.imageViewRealizarLlamada.setOnClickListener{
+              /*  val intentCall= Intent(Intent(Intent.ACTION_DIAL, Uri.parse(nota.telefono.toString())))
+                startActivity(intentCall)*/
+
                 makeCall(nota.telefono.toString())
             }
 

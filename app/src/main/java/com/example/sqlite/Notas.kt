@@ -6,9 +6,9 @@ class Notas{
     var nombre: String? = null
     var cargo: String? = null
     var correo: String? = null
-    var telefono: Int? = null
+    var telefono: String? = null
 
-    constructor(notasID: Int,nombre: String,cargo: String,correo: String,telefono: Int){
+    constructor(notasID: Int,nombre: String,cargo: String,correo: String,telefono: String){
 
 
         this.notasID = notasID

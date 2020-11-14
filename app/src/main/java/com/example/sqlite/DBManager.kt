@@ -22,7 +22,7 @@ class DBManager{
 
     val sqlCrearTabla = "CREATE TABLE IF NOT EXISTS " + dbTabla + " (" + ColumnaID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
             ColumnaNombre + " TEXT NOT NULL," + ColumnaCargo + " TEXT NOT NULL,"+ columnaCorreo + " TEXT NOT NULL,"+
-            ColumnaTelefono + " INT NOT NULL)"
+            ColumnaTelefono + " TEXT NOT NULL)"
 
 
     var sqlDB: SQLiteDatabase?=null
