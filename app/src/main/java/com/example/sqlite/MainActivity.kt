@@ -10,7 +10,9 @@ import android.widget.BaseAdapter
 import android.widget.SearchView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.molde_notas.*
 import kotlinx.android.synthetic.main.molde_notas.view.*
+import  org.jetbrains.anko.*
 
 class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
@@ -21,6 +23,8 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         cargarQuery("%")
+
+
 
     }
 
@@ -120,16 +124,22 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
                 intent.putExtra("Cargo",nota.cargo)
                 intent.putExtra("Correo",nota.correo)
                 intent.putExtra("Telefono",nota.telefono)
+
+
+
                 startActivity(intent)
+
+
 
             }
 
             miVista.imageViewRealizarLlamada.setOnClickListener{
-
+                makeCall(nota.telefono.toString())
             }
 
             miVista.imageViewEnviarCorreo.setOnClickListener{
-
+                val email = nota.correo.toString()
+                email(email,"title del correo electronico","este es un correo")
             }
 
 
