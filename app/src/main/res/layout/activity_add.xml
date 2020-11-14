@@ -11,37 +11,9 @@
         android:id="@+id/editTextCargo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
         android:ems="10"
         android:hint="Cargo"
-        android:inputType="textPersonName"
-        android:textColor="@color/Blanco"
-        android:textColorHint="@color/Blanco"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="124dp" />
-
-    <EditText
-        android:id="@+id/editTextNumeroTelefono"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Telefono"
-        android:inputType="textPersonName"
-        android:textColor="@color/Blanco"
-        android:textColorHint="@color/Blanco"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="262dp" />
-
-    <EditText
-        android:id="@+id/editTextNombreEmpleado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:ems="10"
-        android:hint="Nombre empleado"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         android:textColorHint="@color/Blanco"
@@ -51,9 +23,43 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/editTextNumeroTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Telefono"
+        android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
+        android:textColorHint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCorreo"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <EditText
+        android:id="@+id/editTextNombreEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre empleado"
+        android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
+        android:textColorHint="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCargo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.582" />
+
+    <EditText
         android:id="@+id/editTextCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:hint="Correo"
         android:inputType="textPersonName"
@@ -62,13 +68,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="189dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCargo" />
 
     <Button
         android:id="@+id/buttonAgregar"
-        android:layout_width="135dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="156dp"
+        android:layout_width="121dp"
+        android:layout_height="51dp"
         android:background="@drawable/btn_aregar"
         android:drawableRight="@mipmap/ic_add"
         android:onClick="btnAdd"
@@ -78,6 +83,8 @@
         android:textColor="@color/negro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.863" />
 </androidx.constraintlayout.widget.ConstraintLayout>
