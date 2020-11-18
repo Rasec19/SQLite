@@ -6,6 +6,7 @@
 
     <color name="Blanco">#FFFF</color>
     <color name="Rojo">#b71c1c</color>
+    <color name="facebook">#0d47a1</color>
     <color name="negro">#000000</color>
 
 </resources>
