@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "930516166862",
+    "firebase_url": "https://gong-go.firebaseio.com",
+    "project_id": "gong-go",
+    "storage_bucket": "gong-go.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930516166862:android:da72662c374422e0d9489f",
+        "android_client_info": {
+          "package_name": "com.example.sqlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "930516166862-2u4rib3i5cclkanhb58pmg9m319mso4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOQ81RfjJo9K_XoaX-iQcuQrqymEFIPsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "930516166862-2u4rib3i5cclkanhb58pmg9m319mso4q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
