@@ -9,4 +9,7 @@
     <color name="facebook">#0d47a1</color>
     <color name="negro">#000000</color>
 
+    <color name="ColorMoldeExterior"> #c4c4c4</color>
+    <color name="ColorMoldeInterior">#e5e5e5 </color>
+
 </resources>
