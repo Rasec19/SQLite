@@ -8,13 +8,14 @@
     tools:context=".AddActivity">
 
     <EditText
-        android:id="@+id/editTextCargo"
+        android:id="@+id/editTextContraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
         android:ems="10"
-        android:hint="Cargo"
+        android:hint="Contraseña"
         android:inputType="textPersonName"
+        android:password="true"
         android:textColor="@color/Blanco"
         android:textColorHint="@color/Blanco"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,11 +45,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nombre empleado"
+        android:hint="Nombre de usuario"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         android:textColorHint="@color/Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCargo"
+        app:layout_constraintBottom_toTopOf="@+id/editTextContraseña"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCargo" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextContraseña" />
 
     <Button
         android:id="@+id/buttonAgregar"

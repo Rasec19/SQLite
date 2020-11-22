@@ -24,7 +24,7 @@ class AddActivity : AppCompatActivity() {
 
             if(id!=0){
                 editTextNombreEmpleado.setText(bundle.getString("Nombre"))
-                editTextCargo.setText(bundle.getString("Cargo"))
+                editTextContraseña.setText(bundle.getString("Cargo"))
                 editTextCorreo.setText(bundle.getString("Correo"))
                 editTextNumeroTelefono.setText(bundle.getString("Telefono"))
             }
@@ -39,7 +39,7 @@ class AddActivity : AppCompatActivity() {
 
         val values = ContentValues()
             values.put("Nombre",editTextNombreEmpleado.text.toString())
-            values.put("Cargo",editTextCargo.text.toString())
+            values.put("Cargo",editTextContraseña.text.toString())
             values.put("Correo",editTextCorreo.text.toString())
             values.put("Telefono",editTextNumeroTelefono.text.toString())
 

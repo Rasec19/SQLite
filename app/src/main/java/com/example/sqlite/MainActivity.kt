@@ -38,7 +38,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
     fun cargarQuery(titulo: String){
         var baseDatos = DBManager(this)
-        val columnas = arrayOf("ID", "Nombre", "Cargo", "Correo", "Telefono")
+        val columnas = arrayOf("ID", "Nombre", "Contraseña", "Correo", "Telefono")
         val selectionArgs = arrayOf(titulo)
 
         var cursor = baseDatos.query(columnas,"Nombre like ?",selectionArgs,"Nombre")
@@ -50,11 +50,11 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             do{
                 val ID = cursor.getInt(cursor.getColumnIndex("ID"))
                 val nombre = cursor.getString(cursor.getColumnIndex("Nombre"))
-                val cargo = cursor.getString(cursor.getColumnIndex("Cargo"))
+                val contraseña = cursor.getString(cursor.getColumnIndex("Contraseña"))
                 val correo = cursor.getString(cursor.getColumnIndex("Correo"))
                 val telefono = cursor.getString(cursor.getColumnIndex("Telefono"))
 
-                listaDeNotas.add(Notas(ID,nombre,cargo,correo,telefono))
+                listaDeNotas.add(Notas(ID,nombre,contraseña,correo,telefono))
             }while (cursor.moveToNext())
         }
 

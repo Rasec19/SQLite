@@ -4,7 +4,7 @@ class Notas{
 
     var notasID: Int? = null
     var nombre: String? = null
-    var cargo: String? = null
+    var contraseña: String? = null
     var correo: String? = null
     var telefono: String? = null
 
@@ -13,7 +13,7 @@ class Notas{
 
         this.notasID = notasID
         this.nombre = nombre
-        this.cargo = cargo
+        this.contraseña = cargo
         this.correo = correo
         this.telefono = telefono
     }
