@@ -15,13 +15,13 @@ class DBManager{
     val dbTabla = "Notas"
     val ColumnaID = "ID"
     val ColumnaNombre = "Nombre"
-    val ColumnaCargo = "Cargo"
+    val ColumnaContraseña = "Contraseña"
     val columnaCorreo = "Correo"
     val ColumnaTelefono = "Telefono"
     val dbVersion = 1
 
     val sqlCrearTabla = "CREATE TABLE IF NOT EXISTS " + dbTabla + " (" + ColumnaID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
-            ColumnaNombre + " TEXT NOT NULL," + ColumnaCargo + " TEXT NOT NULL,"+ columnaCorreo + " TEXT NOT NULL,"+
+            ColumnaNombre + " TEXT NOT NULL," + ColumnaContraseña + " TEXT NOT NULL,"+ columnaCorreo + " TEXT NOT NULL,"+
             ColumnaTelefono + " TEXT NOT NULL)"
 
 

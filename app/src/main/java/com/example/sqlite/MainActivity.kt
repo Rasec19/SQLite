@@ -38,7 +38,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
     fun cargarQuery(titulo: String){
         var baseDatos = DBManager(this)
-        val columnas = arrayOf("ID", "Nombre", "Cargo", "Correo", "Telefono")
+        val columnas = arrayOf("ID", "Nombre", "Contraseña", "Correo", "Telefono")
         val selectionArgs = arrayOf(titulo)
 
         var cursor = baseDatos.query(columnas,"Nombre like ?",selectionArgs,"Nombre")
@@ -50,11 +50,11 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             do{
                 val ID = cursor.getInt(cursor.getColumnIndex("ID"))
                 val nombre = cursor.getString(cursor.getColumnIndex("Nombre"))
-                val cargo = cursor.getString(cursor.getColumnIndex("Cargo"))
+                val contraseña = cursor.getString(cursor.getColumnIndex("Contraseña"))
                 val correo = cursor.getString(cursor.getColumnIndex("Correo"))
                 val telefono = cursor.getString(cursor.getColumnIndex("Telefono"))
 
-                listaDeNotas.add(Notas(ID,nombre,cargo,correo,telefono))
+                listaDeNotas.add(Notas(ID,nombre,contraseña,correo,telefono))
             }while (cursor.moveToNext())
         }
 
@@ -106,7 +106,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             val inflater = contexto!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val miVista = inflater.inflate(R.layout.molde_notas, null)
 
-            miVista.textViewNombreEmpleado.text = nota.nombre
+            /*miVista.textViewNombreEmpleado.text = nota.nombre
             miVista.textViewCargoEmpleado.text = nota.cargo
             miVista.textViewCorreo.text = nota.correo
             miVista.textViewNumeroTelefono.text = nota.telefono
@@ -117,9 +117,9 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
                 dbManager.borrar("ID=?",selectionArgs)
                 cargarQuery("%")
-            }
+            }*/
 
-            miVista.imageViewEdicion.setOnClickListener{
+            /*miVista.imageViewEdicion.setOnClickListener{
                 val intent = Intent(this@MainActivity,AddActivity::class.java)
                 intent.putExtra("ID",nota.notasID)
                 intent.putExtra("Nombre",nota.nombre)
@@ -133,19 +133,19 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
 
 
-            }
+            }*/
 
-            miVista.imageViewRealizarLlamada.setOnClickListener{
+            /*miVista.imageViewRealizarLlamada.setOnClickListener{
               /*  val intentCall= Intent(Intent(Intent.ACTION_DIAL, Uri.parse(nota.telefono.toString())))
                 startActivity(intentCall)*/
 
                 makeCall(nota.telefono.toString())
-            }
+            }*/
 
-            miVista.imageViewEnviarCorreo.setOnClickListener{
+           /* miVista.imageViewEnviarCorreo.setOnClickListener{
                 val email = nota.correo.toString()
                 email(email,"title del correo electronico","este es un correo")
-            }
+            }*/
 
 
             return miVista
