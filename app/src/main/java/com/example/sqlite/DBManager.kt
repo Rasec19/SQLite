@@ -20,6 +20,22 @@ class DBManager{
     val ColumnaTelefono = "Telefono"
     val dbVersion = 1
 
+    // varibles para la tabla evento
+//    val dbEvento="MisEventos"
+//    val dbTabla="Evento"
+//    val ColumnaEventoID="ID"
+//    val ColumnaEventoNombre="NombreEvento"
+//    val CalumnaLugar="Lugar"
+//    val ColumnaFecha="Fecha"
+//    val ColumnaHora="Hora"
+//    val ColumnaDescripcion="Descripcion "
+
+
+//    val sqlCrearTabla = "CREATE TABLE IF NOT EXISTS " + dbTabla + " (" + ColumnaID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
+//            ColumnaNombre + " TEXT NOT NULL," + ColumnaContraseña + " TEXT NOT NULL,"+ columnaCorreo + " TEXT NOT NULL,"+
+//            ColumnaTelefono + " TEXT NOT NULL)"
+
+
     val sqlCrearTabla = "CREATE TABLE IF NOT EXISTS " + dbTabla + " (" + ColumnaID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
             ColumnaNombre + " TEXT NOT NULL," + ColumnaContraseña + " TEXT NOT NULL,"+ columnaCorreo + " TEXT NOT NULL,"+
             ColumnaTelefono + " TEXT NOT NULL)"
