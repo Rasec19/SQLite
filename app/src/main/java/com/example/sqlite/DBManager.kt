@@ -31,9 +31,9 @@ class DBManager{
 //    val ColumnaDescripcion="Descripcion "
 
 
-//    val sqlCrearTabla = "CREATE TABLE IF NOT EXISTS " + dbTabla + " (" + ColumnaID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
-//            ColumnaNombre + " TEXT NOT NULL," + ColumnaContraseña + " TEXT NOT NULL,"+ columnaCorreo + " TEXT NOT NULL,"+
-//            ColumnaTelefono + " TEXT NOT NULL)"
+//    val sqlCrearTabla = "CREATE TABLE IF NOT EXISTS " + dbTabla + " (" + ColumnaEventoID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
+//            ColumnaEventoNombre + " TEXT NOT NULL," + ColumnaLugar + " TEXT NOT NULL,"+ ColumnaFecha + " TEXT NOT NULL,"+
+//            ColumnaHora + " TEXT NOT NULL",+ColumnaDescripcion+ "TEXT NOT NULL)"
 
 
     val sqlCrearTabla = "CREATE TABLE IF NOT EXISTS " + dbTabla + " (" + ColumnaID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
