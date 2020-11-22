@@ -107,7 +107,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             val miVista = inflater.inflate(R.layout.molde_notas, null)
 
             /*miVista.textViewNombreEmpleado.text = nota.nombre
-            miVista.textViewCargoEmpleado.text = nota.cargo
+            miVista.textViewCargoEmpleado.text = nota.contraseña
             miVista.textViewCorreo.text = nota.correo
             miVista.textViewNumeroTelefono.text = nota.telefono
 
@@ -133,18 +133,6 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
 
 
-            }*/
-
-            /*miVista.imageViewRealizarLlamada.setOnClickListener{
-              /*  val intentCall= Intent(Intent(Intent.ACTION_DIAL, Uri.parse(nota.telefono.toString())))
-                startActivity(intentCall)*/
-
-                makeCall(nota.telefono.toString())
-            }*/
-
-           /* miVista.imageViewEnviarCorreo.setOnClickListener{
-                val email = nota.correo.toString()
-                email(email,"title del correo electronico","este es un correo")
             }*/
 
 
