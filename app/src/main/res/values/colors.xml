@@ -11,5 +11,6 @@
 
     <color name="ColorMoldeExterior"> #c4c4c4</color>
     <color name="ColorMoldeInterior">#e5e5e5 </color>
+    <color name="Amarillo">#ffff00</color>
 
 </resources>

@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/Rojo">
 
 
     <LinearLayout
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:ems="10"
+            android:textColor="@color/Blanco"
             android:inputType="textPersonName"
             android:text="Evento"
             android:textAlignment="center" />
@@ -34,6 +36,7 @@
                 android:layout_width="178dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/Blanco"
                 android:text="Maestro" />
 
             <TextView
@@ -41,6 +44,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/Blanco"
                 android:text="Lugar" />
         </LinearLayout>
 
@@ -52,6 +56,7 @@
             <Spinner
                 android:id="@+id/spinnerEvento"
                 android:layout_width="match_parent"
+                android:outlineSpotShadowColor="@color/Blanco"
                 android:layout_height="65dp" />
 
         </LinearLayout>
@@ -65,11 +70,13 @@
                 android:id="@+id/buttonCancelar"
                 android:layout_width="219dp"
                 android:layout_height="wrap_content"
+                android:background="@color/Blanco"
                 android:text="Cancelar" />
 
             <Button
                 android:id="@+id/buttonIngresar"
                 android:layout_width="194dp"
+                android:background="@color/Amarillo"
                 android:layout_height="wrap_content"
                 android:text="Ingresar" />
         </LinearLayout>

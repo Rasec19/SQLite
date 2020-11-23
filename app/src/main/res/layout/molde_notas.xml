@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/ColorMoldeExterior"
+    android:background="@color/Rojo"
     >
 
     <LinearLayout
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="6pt"
-        android:backgroundTint="@color/ColorMoldeInterior"
+        android:backgroundTint="@color/"
         android:background="@drawable/background_notas">
 
 
@@ -23,6 +23,13 @@
             android:background="@color/ColorMoldeExterior"
             android:orientation="horizontal"
             android:rotationX="-3">
+
+            <ImageButton
+                android:id="@+id/imageButtonNotificacionEI"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="center"
+                app:srcCompat="@mipmap/ic_notificacion_individual" />
 
             <TextView
                 android:id="@+id/textViewNombreEvento"
@@ -38,14 +45,7 @@
                 android:textSize="15dp"
                 android:text="lugar" />
 
-            <ImageButton
-                android:id="@+id/imageButtonNotificacionEI"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:scaleType="center"
-                app:srcCompat="@mipmap/ic_notificacion_individual" />
         </LinearLayout>
-
 
 
         <TextView

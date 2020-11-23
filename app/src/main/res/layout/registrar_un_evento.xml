@@ -10,58 +10,42 @@
         android:id="@+id/textViewNombreEvento"
         android:layout_width="112dp"
         android:layout_height="51dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="48dp"
         android:text="Nombre"
         android:textColor="@color/Blanco"
         android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonAgregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:text="Agregar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toEndOf="@+id/buttonCancelar"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDescripcion"
-        app:layout_constraintVertical_bias="0.295" />
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="655dp" />
 
     <Button
         android:id="@+id/buttonCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="60dp"
         android:text="Cancelar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextDescripcion"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="653dp" />
 
     <TextView
         android:id="@+id/textViewLugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="44dp"
         android:text="Lugar"
         android:textColor="@color/Blanco"
         android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextLugar"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNombreEvento" />
 
     <TextView
@@ -69,145 +53,104 @@
         android:layout_width="111dp"
         android:layout_height="35dp"
 
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:text="Correo"
         android:textColor="@color/Blanco"
         android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextCorro"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLugar" />
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="216dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         android:textColor="@color/Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextLugar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextLugar"
         android:layout_width="211dp"
         android:layout_height="51dp"
 
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="24dp"
         android:ems="10"
         android:textColor="@color/Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextCorro"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="123dp" />
 
     <EditText
         android:id="@+id/editTextTextTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginBottom="121dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextDescripcion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextCorro" />
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="281dp" />
 
     <EditText
         android:id="@+id/editTextTextFechaYHora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginBottom="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextDescripcion"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="369dp" />
 
     <EditText
         android:id="@+id/editTextTextDescripcion"
         android:layout_width="205dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="139dp"
+        android:layout_height="152dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextTelefono" />
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="437dp" />
 
     <TextView
         android:id="@+id/textViewNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginLeft="124dp"
-        android:layout_marginTop="48dp"
         android:text="tel:"
         android:textColor="@color/Blanco"
         android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextTelefono"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCorreo" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="288dp" />
 
     <TextView
         android:id="@+id/textViewFechaHora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:text="FechaHra"
         android:textColor="@color/Blanco"
         android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextFechaYHora"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNumero" />
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="369dp" />
 
     <TextView
         android:id="@+id/textViewDescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="96dp"
         android:text="Descripcopn"
         android:textColor="@color/Blanco"
         android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextDescripcion"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFechaHora" />
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="491dp" />
 
     <EditText
         android:id="@+id/editTextTextCorro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="206dp"
-        android:layout_marginBottom="23dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextTelefono"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="206dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
