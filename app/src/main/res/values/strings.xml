@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SQLITE</string>
+    <string name="evento">Evento</string>
+    <string name="lugar">lugar</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="incribirce">Incribirce</string>
+    <string name="asistir">Asistir</string>
+    <string name="info">INFO+</string>
+    <string name="todo">TODO</string>
 </resources>
