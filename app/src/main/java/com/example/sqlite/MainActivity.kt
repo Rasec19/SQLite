@@ -3,23 +3,18 @@ package com.example.sqlite
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
 import android.widget.BaseAdapter
 import android.widget.SearchView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_add.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.molde_notas.*
-import kotlinx.android.synthetic.main.molde_notas.view.*
-import  org.jetbrains.anko.*
 
-class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
+class MainActivity () : AppCompatActivity() {
 
-    var listaDeNotas = ArrayList<Notas>()
-
+    var listaDeNotas = ArrayList<Usuarios>()
+/*-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,8 +29,8 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
         super.onResume()
         cargarQuery("%")
     }
-
-
+*/
+/*
     fun cargarQuery(titulo: String){
         var baseDatos = DBManager(this)
         val columnas = arrayOf("ID", "Nombre", "Contraseña", "Correo", "Telefono")
@@ -54,7 +49,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
                 val correo = cursor.getString(cursor.getColumnIndex("Correo"))
                 val telefono = cursor.getString(cursor.getColumnIndex("Telefono"))
 
-                listaDeNotas.add(Notas(ID,nombre,contraseña,correo,telefono))
+                listaDeNotas.add(Usuarios(ID,nombre,contraseña,correo,telefono))
             }while (cursor.moveToNext())
         }
 
@@ -63,7 +58,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
         listView.adapter = adapter
 
     }
-
+*/
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu,menu)
 
@@ -73,7 +68,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
         buscar.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 Toast.makeText(applicationContext,query,Toast.LENGTH_LONG).show()
-                cargarQuery("%"+query+"%")
+
                 return false
             }
 
@@ -95,8 +90,8 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
-
-    inner class NotasAdapter(contexto: Context, var listaDeNotas: ArrayList<Notas>): BaseAdapter() {
+/*
+    inner class NotasAdapter(contexto: Context, var listaDeNotas: ArrayList<Usuarios>): BaseAdapter() {
 
         var contexto: Context? = contexto
 
@@ -106,7 +101,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
             val inflater = contexto!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val miVista = inflater.inflate(R.layout.molde_notas, null)
 
-            /*miVista.textViewNombreEmpleado.text = nota.nombre
+            miVista.textViewNombreEmpleado.text = nota.nombre
             miVista.textViewCargoEmpleado.text = nota.contraseña
             miVista.textViewCorreo.text = nota.correo
             miVista.textViewNumeroTelefono.text = nota.telefono
@@ -117,9 +112,9 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
                 dbManager.borrar("ID=?",selectionArgs)
                 cargarQuery("%")
-            }*/
+            }
 
-            /*miVista.imageViewEdicion.setOnClickListener{
+            miVista.imageViewEdicion.setOnClickListener{
                 val intent = Intent(this@MainActivity,AddActivity::class.java)
                 intent.putExtra("ID",nota.notasID)
                 intent.putExtra("Nombre",nota.nombre)
@@ -133,7 +128,7 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
 
 
 
-            }*/
+            }
 
 
             return miVista
@@ -152,5 +147,5 @@ class MainActivity (var adapter: NotasAdapter? = null) : AppCompatActivity() {
         }
 
     }
-
+*/
 }

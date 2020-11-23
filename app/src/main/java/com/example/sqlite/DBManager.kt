@@ -12,7 +12,7 @@ class DBManager{
 
 
     val dbNombre = "MisNotas"
-    val dbTabla = "Notas"
+    val dbTabla = "Usuarios"
     val ColumnaID = "ID"
     val ColumnaNombre = "Nombre"
     val ColumnaContraseña = "Contraseña"

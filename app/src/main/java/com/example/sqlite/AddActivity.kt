@@ -23,7 +23,7 @@ class AddActivity : AppCompatActivity() {
             id = bundle!!.getInt("ID",0)
 
             if(id!=0){
-                editTextNombreEmpleado.setText(bundle.getString("Nombre"))
+                editTextNombreUsiario.setText(bundle.getString("Nombre"))
                 editTextContraseña.setText(bundle.getString("Contraseña"))
                 editTextCorreo.setText(bundle.getString("Correo"))
                 editTextNumeroTelefono.setText(bundle.getString("Telefono"))
@@ -38,7 +38,7 @@ class AddActivity : AppCompatActivity() {
         val baseDatos = DBManager(this)
 
         val values = ContentValues()
-            values.put("Nombre",editTextNombreEmpleado.text.toString())
+            values.put("Nombre",editTextNombreUsiario.text.toString())
             values.put("Contraseña",editTextContraseña.text.toString())
             values.put("Correo",editTextCorreo.text.toString())
             values.put("Telefono",editTextNumeroTelefono.text.toString())
