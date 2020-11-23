@@ -1,5 +1,6 @@
 package com.example.sqlite
 
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +17,8 @@ import org.jetbrains.anko.startActivity
 
 class Login : AppCompatActivity(){
     var ListaUsuarios = ArrayList<Usuarios>()
-
+    var Usuario:String?=null
+    var password:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
@@ -25,10 +27,43 @@ class Login : AppCompatActivity(){
             startActivity<AddActivity>()
         }
 
+          buttonIngresar.setOnClickListener{
+
+              val values: ArrayList<String>
+              var Usuario:String?=null
+              var password:String?=null
+              Usuario=editTextUsuario.toString()
+              textViewIntent.text=edad.toString()
+              values.add(Usuario)
+              values.add("")
+
+
+              if(id == 0){
+                  val ID = baseDatos.insert(values)
+                  val ID = baseDatos.query(values)
+                  if(ID>0) {
+                      Toast.makeText(this, "El registro se ingreso con exito", Toast.LENGTH_LONG).show()
+                      finish()
+                  }else{
+                      Toast.makeText(this,"El registro no se realizo!",Toast.LENGTH_LONG).show()
+                  }
+              }else{
+                  val selectionArgs = arrayOf(id.toString())
+
+                  val ID = baseDatos.actualizar(values,"ID=?",selectionArgs)
+
+                  if(ID>0){
+                      Toast.makeText(this,"El registro se realizo con exito",Toast.LENGTH_LONG).show()
+                      finish()
+                  }else{
+                      Toast.makeText(this,"El registro no se realizo con exito",Toast.LENGTH_LONG).show()
+                  }
+          }
+
+
     }
 
-    var Usuario:String?=null
-    var password:String?=null
+
 
 
 
